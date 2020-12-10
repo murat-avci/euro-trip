@@ -11,7 +11,7 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del =require("del");
-const terser = require('gulp-terser');
+/* const terser = require('gulp-terser');*/
 const htmlmin = require('gulp-htmlmin');
 
 // Styles
@@ -88,7 +88,7 @@ exports.server = server;
 
 const copy = () => {
   return gulp.src([
-    "source/css/style.css",
+    // "source/css/style.css",
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
@@ -149,7 +149,7 @@ exports.js = js;
 
 // Build
 
-gulp.task("build", gulp.series(clean, copy, styles, images, webpImages, sprite, html, js));
+gulp.task("build", gulp.series(clean, copy, styles, images, webpImages, sprite, html));
 
 // Gulp start
 
