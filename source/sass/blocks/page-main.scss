@@ -1,0 +1,39 @@
+.page-main__wrapper {
+  padding: 0 ((238 / 1920) * 100%);
+}
+
+.page-main__intro {
+  background-image: url("../img/bg-intro-desktop@1x.png");
+  background-color: $bg-color;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 860px;
+}
+
+.page-main__places-wrap {
+  margin-top: 199px;
+}
+
+.page-main__places {
+  margin-left: ((137 / 1444) * 100%);
+}
+
+.page-main__country-card {
+  margin-top: 56px;
+}
+
+.page-main__tab-details {
+  margin-top: 95px;
+  margin-bottom: 240px;
+}
+
+.page-main__form {
+  position: relative;
+  background: url("../img/bg-sea-horizon-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  min-height: 455px;
+  margin-bottom: 170px;
+}

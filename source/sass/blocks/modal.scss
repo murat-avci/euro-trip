@@ -1,0 +1,78 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__buy {
+  display: none;
+}
+
+.modal__buy-wrap {
+  position: relative;
+  display: flex;
+  width: 728px;
+  height: auto;
+  background-color: $modal;
+}
+
+.modal__buy-close {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  width: 22px;
+  height: 22px;
+}
+
+.modal__buy-inner-wrap {
+  padding: 72px 61px 89px 59px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal__buy-title {
+  margin-bottom: 52px;
+}
+
+.modal__buy-input-wrap {
+  margin-bottom: 20px;
+}
+
+.modal__buy-input {
+  width: 270px;
+  min-height: 50px;
+}
+
+.modal__buy-submit {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 18px 39px 17px 40px;
+  background-color: $main-accent;
+  color: $basic-white;
+  border: none;
+}
+
+.modal__message {
+  display: none;
+  font-family: inherit;
+  font-size: 25px;
+  line-height: 43px;
+  font-weight: 500;
+  text-align: center;
+  width: 728px;
+  padding: 179px 164px 179px 165px;
+  background-color: $modal;
+  color: $modal-message;
+}
+
+.modal__message-close {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  width: 22px;
+  height: 22px;
+}

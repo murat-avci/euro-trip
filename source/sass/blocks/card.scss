@@ -1,0 +1,24 @@
+// .card__list {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+// }
+
+// .card__item {
+//   margin-left: ((60 / 1444) * 100%);
+//   margin-bottom: 100px;
+
+//   &:nth-child(3n+1),
+//   &:first-child {
+//     margin-left: 0;
+//   }
+// }
+
+// .card__link {
+//   text-decoration: none;
+// }
+
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

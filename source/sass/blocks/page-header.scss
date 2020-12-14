@@ -1,0 +1,11 @@
+.page-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  padding-top: 39px;
+  padding-bottom: 38px;
+}
+
+.page-header__logo {
+  flex-basis: 50%;
+}

@@ -1,0 +1,36 @@
+.tab-details {
+  position: relative;
+}
+
+.tab-details__item {
+  display: flex;
+  justify-content: flex-start;
+
+  &:not(:first-child) {
+    display: none;
+  }
+}
+
+.tab-details__wrapper {
+  margin-right: 100px;
+  margin-top: 15px;
+}
+
+.tab-details__title {
+  margin-bottom: 53px;
+}
+
+.tab-details__description {
+  width: 370px;
+}
+
+.tab-details__review-wrap {
+  max-width: 382px;
+}
+
+.tab-details__button {
+  position: absolute;
+  top: 505px;
+  left: 0;
+  transform: translateY(-50%);
+}

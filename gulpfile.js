@@ -27,7 +27,7 @@ const styles = () => {
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 };
 
@@ -88,7 +88,8 @@ exports.server = server;
 
 const copy = () => {
   return gulp.src([
-    // "source/css/style.css",
+    "source/css/*.css",
+    "source/css/*.css.map",
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",

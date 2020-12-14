@@ -1,0 +1,20 @@
+.prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 111px;
+}
+
+.prices__offer {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-bottom: 138px;
+}
+
+.prices__wrap {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}

@@ -1,0 +1,32 @@
+.review {
+  position: absolute;
+  top: 114px;
+  left: 655px;
+  width: 382px;
+  background-color: $basic-white;
+  padding: 30px;
+}
+
+.review__title {
+  margin-bottom: 32px;
+}
+
+.review__item {
+  &:not(:first-child) {
+    display: none;
+  }
+}
+
+.review__text {
+  margin-bottom: 35px;
+}
+
+.review__inner-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.review__author {
+  margin-left: 16px;
+}
