@@ -1,5 +1,68 @@
 .page-footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0 384px 75px 238px;
+  padding: 0 384px 75px 388px;
+}
+
+.page-footer__contacts {
+  padding-left: 90px;
+  width: 100%;
+  border-left: 1px solid $lines;
+  border-right: 1px solid $lines;
+}
+
+.page-footer__title {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 600;
+  color: $darkest;
+  margin-bottom: 20px;
+}
+
+.page-footer__contacts-email {
+  position: relative;
+  margin-bottom: 19px;
+  margin-left: 41px;
+
+  & svg {
+    position: absolute;
+    top: -1px;
+    left: -41px;
+  }
+}
+
+.page-footer__contacts-phone {
+  position: relative;
+  margin-left: 41px;
+
+  & svg {
+    position: absolute;
+    top: -2px;
+    left: -41px;
+  }
+}
+
+.page-footer__contacts-link {
+  color: $main-accent;
+
+  &--phone {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &--email {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+.page-footer__corporate {
+  padding-left: 49px;
+}
+
+.page-footer__corporate-text {
+  font-size: 14px;
+  line-height: 24px;
+  max-width: 320px;
+  color: rgba($color: $darkest, $alpha: 0.5);
 }

@@ -1,9 +1,10 @@
 .page-main__wrapper {
-  padding: 0 ((238 / 1920) * 100%);
+  padding-left: ((375 / 1920) * 100%);
+  padding-right: ((363 / 1920) * 100%);
 }
 
 .page-main__intro {
-  background-image: url("../img/bg-intro-desktop@1x.png");
+  background-image: url("../img/bg-intro-desktop@1x.jpg");
   background-color: $bg-color;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -12,11 +13,37 @@
 }
 
 .page-main__places-wrap {
+  padding-right: ((10 / 1180) * 100%);
   margin-top: 199px;
 }
 
-.page-main__places {
-  margin-left: ((137 / 1444) * 100%);
+.page-main__title {
+  position: relative;
+  font-size: 55px;
+  line-height: 80px;
+  font-weight: 600;
+  letter-spacing: -1.245px;
+  margin-bottom: 64px;
+  max-width: 358px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 190px;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: $main-accent;
+    width: 228px;
+    height: 4px;
+  }
+}
+
+.page-main__subject {
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.47px;
+  color: rgba($color: $dark, $alpha: 0.7);
+  width: 328px;
 }
 
 .page-main__country-card {
@@ -28,6 +55,18 @@
   margin-bottom: 240px;
 }
 
+.page-main__tabs {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: url("../img/country-map.svg");
+    top: 110px;
+    left: -138px;
+    z-index: -5;
+  }
+}
+
 .page-main__form {
   position: relative;
   background: url("../img/bg-sea-horizon-desktop@1x.png");
@@ -36,4 +75,5 @@
   background-size: auto;
   min-height: 455px;
   margin-bottom: 170px;
+  margin-left: 12px;
 }

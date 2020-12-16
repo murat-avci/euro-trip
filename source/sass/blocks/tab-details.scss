@@ -17,11 +17,33 @@
 }
 
 .tab-details__title {
+  position: relative;
+  font-size: 55px;
+  line-height: 90px;
+  font-weight: 600;
   margin-bottom: 53px;
+  color: $dark;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 110px;
+    left: 0;
+    transform: translateY(50%);
+    background-color: $main-accent;
+    width: 175px;
+    height: 3px;
+  }
 }
 
 .tab-details__description {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: rgba($color: $dark, $alpha: 0.7);
+  letter-spacing: -0.46px;
   width: 370px;
+  margin-bottom: 50px;
 }
 
 .tab-details__review-wrap {
@@ -29,8 +51,13 @@
 }
 
 .tab-details__button {
-  position: absolute;
-  top: 505px;
-  left: 0;
-  transform: translateY(-50%);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  color: $basic-white;
+  text-transform: uppercase;
+  padding: 30px 40px;
+  border: none;
+  background-color: $main-accent;
 }

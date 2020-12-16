@@ -1,9 +1,31 @@
 .tabs__menu {
+  position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 899px;
   margin-bottom: 95px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 38px;
+    left: 0;
+    background-color: $dark;
+    opacity: 30%;
+    height: 1px;
+    width: 100%;
+  }
 }
 
 .tabs__link {
   text-decoration: none;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: rgba($color: $dark, $alpha: 0.3);
+
+  &--active {
+    color: rgba($color: $main-accent, $alpha: 1);
+  }
 }
