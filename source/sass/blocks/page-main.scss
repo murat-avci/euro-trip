@@ -4,6 +4,7 @@
 }
 
 .page-main__intro {
+  position: relative;
   background-image: url("../img/bg-intro-desktop@1x.jpg");
   background-color: $bg-color;
   background-position: 0 0;
@@ -12,9 +13,62 @@
   min-height: 860px;
 }
 
+.page-main__intro-wrap {
+  position: absolute;
+  top: 185px;
+  left: ((1075 / 1920) * 100%);
+  width: 412px;
+}
+
 .page-main__places-wrap {
   padding-right: ((10 / 1180) * 100%);
   margin-top: 199px;
+}
+
+.page-main__main-title {
+  font-size: 55px;
+  line-height: 80px;
+  font-weight: 600;
+  letter-spacing: -1.11px;
+  margin-bottom: 30px;
+  color: $basic-white;
+}
+
+.page-main__main-subject {
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: -0.467px;
+  width: 376px;
+  margin-bottom: 39px;
+  color: $basic-white;
+}
+
+.page-main__button {
+  position: relative;
+  background-color: $main-accent;
+  width: 340px;
+
+  &:hover {
+    background-color: $accent-focus;
+  }
+}
+
+.page-main__arrow-right {
+  position: absolute;
+  top: 31px;
+  right: 40px;
+  fill: none;
+}
+
+.page-main__anchor-link {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic-white;
+  padding: 30px 179px 30px 40px;
 }
 
 .page-main__title {
@@ -76,4 +130,106 @@
   min-height: 455px;
   margin-bottom: 170px;
   margin-left: 12px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page-main__intro {
+    background-image: url("../../img/bg-intro-tablet@1x.jpg");
+    min-height: 344px;
+  }
+
+  .page-main__intro-wrap {
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 398px;
+    text-align: center;
+  }
+
+  .page-main__places-wrap {
+    padding-right: 0;
+    margin-top: 80px;
+  }
+
+  .page-main__main-title {
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: $basic-white;
+  }
+
+  .page-main__main-subject {
+    width: 398px;
+    margin-bottom: 15px;
+    color: $basic-white;
+  }
+
+  .page-main__button {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .page-main__arrow-right {
+    top: 18px;
+    right: 40px;
+  }
+
+  .page-main__anchor-link {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    padding: 19px 107px 19px 40px;
+  }
+
+  .page-main__places {
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .page-main__title {
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+    color: $dark;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .page-main__subject {
+    width: 343px;
+  }
+
+  .page-main__country-card {
+    margin-top: 40px;
+  }
+
+  .page-main__tab-details {
+    margin-top: 48px;
+    margin-bottom: 112px;
+  }
+
+  .page-main__tabs {
+    &::after {
+      content: none;
+    }
+  }
+
+  .page-main__form {
+    background: url("../img/bg-sea-horizon-tablet@1x.png");
+    background-size: 100% 100%;
+    min-height: 455px;
+    margin-bottom: 80px;
+    margin-left: 0;
+  }
 }

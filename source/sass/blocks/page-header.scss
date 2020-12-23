@@ -1,11 +1,28 @@
 .page-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: stretch;
   padding-top: 39px;
   padding-bottom: 38px;
 }
 
 .page-header__logo {
-  flex-basis: 50%;
+  flex-basis: auto;
+  width: 50%;
+  padding-left: ((375 / 1920) * 100%);
+}
+
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    position: relative;
+    height: 50px;
+    padding-top: 18px;
+    padding-bottom: 14px;
+  }
+
+  .page-header__logo {
+    width: 50%;
+    padding-left: ((21 / 768) * 100%);
+  }
 }

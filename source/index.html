@@ -6,41 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/styles.min.css">
-    <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-regular.woff2" as="font">
+    <!-- <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-regular.woff2" as="font">
     <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-500.woff2" as="font">
     <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-600.woff2" as="font">
-    <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-700.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-v15-latin_cyrillic-700.woff2" as="font"> -->
   </head>
   <body class="page__body">
     <header class="page-header">
       <p class="page-header__logo">
         <picture>
           <source media="(min-width: 1024px)" srcset="img/way-logo-desktop.svg">
-          <source media="(min-width: 320px)" srcset="img/way-logo-mobile-tablet.svg">
+          <source media="(min-width: 768px)" srcset="img/way-logo-mobile-tablet.svg">
           <img src="img/way-logo-desktop.svg" width="57" height="22" alt="Logo Way">
         </picture>
       </p>
       <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href ="#places">О путешествии</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href ="#prices">Цены</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href ="">+7 (499) -784-684-46</a>
-          </li>
-        </ul>
+        <div class="main-nav__menu">
+          <svg class="main-nav__burger-icon" width="30" height="30">
+            <use xlink:href="img/sprite_auto.svg#icon-burger-menu"></use>
+          </svg>
+          <svg class="main-nav__cross-icon visually-hidden" width="24" height="25">
+            <use xlink:href="img/sprite_auto.svg#icon-cross"></use>
+          </svg>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href ="#places">О путешествии</a>
+              <svg class="main-nav__arrow-down-icon" width="25" height="25">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow-down"></use>
+              </svg>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href ="#prices">Цены</a>
+              <svg class="main-nav__arrow-down-icon" width="25" height="25">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow-down"></use>
+              </svg>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href ="">
+                <svg class="main-nav__phone-icon" width="30" height="30">
+                  <use xlink:href="img/sprite_auto.svg#icon-small-phone-header"></use>
+                </svg>+7 (499) -784-684-46
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="page-main">
       <section class="page-main__intro">
-        <h1 class="page-main__main-title">Путешествие по Европе</h1>
-        <p class="page-main__main-subject">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-        <p class="page-main__button">
-            <a class="page-main__anchor-link" href="#tabs">смотреть тур</a>
-        </p>
+        <div class="page-main__intro-wrap">
+          <h1 class="page-main__main-title">Путешествие по Европе</h1>
+          <p class="page-main__main-subject">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+          <p class="page-main__button">
+              <a class="page-main__anchor-link" href="#tabs">смотреть тур
+                <svg class="page-main__arrow-right" width="14" height="14">
+                  <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
+                </svg>
+              </a>
+          </p>
+        </div>
       </section>
       <div class="page-main__wrapper">
         <div class="page-main__places-wrap">
@@ -145,30 +169,30 @@
           <h2 class="visually-hidden">Вкладки</h2>
           <ul class="tabs__menu">
             <li class="tabs__item">
-              <a class="tabs__link tabs__link--active" href="#">Греция</a>
+              <a class="tabs__link tabs__link--active" href="#tab-greece">Греция</a>
             </li>
             <li class="tabs__item">
-              <a class="tabs__link" href="#">Албания</a>
+              <a class="tabs__link" href="#tab-albania">Албания</a>
             </li>
             <li class="tabs__item">
-              <a class="tabs__link" href="#">Македония</a>
+              <a class="tabs__link" href="#tab-macedonia">Македония</a>
             </li>
             <li class="tabs__item">
-              <a class="tabs__link" href="#">Черногория</a>
+              <a class="tabs__link" href="#tab-montenegro">Черногория</a>
             </li>
             <li class="tabs__item">
-              <a class="tabs__link" href="#">Хорватия</a>
+              <a class="tabs__link" href="#tab-croatia">Хорватия</a>
             </li>
           </ul>
         </section>
         <section class="page-main__tab-details tab-details">
           <h2 class="visually-hidden">Описания Стран</h2>
           <ul class="tab-details__list">
-            <li class="tab-details__item tab-details__item--greece">
+            <li class="tab-details__item tab-details__item--greece" id="tab-greece">
               <div class="tab-details__wrapper">
                 <h3 class="tab-details__title">Греция</h3>
                 <p class="tab-details__description">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
-                <button class="tab-details__button" type="button">купить тур сейчас</button>
+                <button class="tab-details__button offer-button" type="button">купить тур сейчас</button>
               </div>
               <p class="tab-details__photo">
                 <picture>
@@ -180,11 +204,11 @@
                 </picture>
               </p>
             </li>
-            <li class="tab-details__item tab-details__item--greece">
+            <li class="tab-details__item tab-details__item-albania" id="tab-albania">
               <div class="tab-details__wrapper">
                 <h3 class="tab-details__title">Албания</h3>
                 <p class="tab-details__description">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния. </p>
-                <button class="tab-details__button" type="button">купить тур сейчас</button>
+                <button class="tab-details__button offer-button" type="button">купить тур сейчас</button>
               </div>
               <p class="tab-details__photo">
                 <picture>
@@ -196,11 +220,11 @@
                 </picture>
               </p>
             </li>
-            <li class="tab-details__item tab-details__item--macedonia">
+            <li class="tab-details__item tab-details__item--macedonia" id="tab-macedonia">
               <div class="tab-details__wrapper">
                 <h3 class="tab-details__title">Македония</h3>
                 <p class="tab-details__description">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.</p>
-                <button class="tab-details__button" type="button">купить тур сейчас</button>
+                <button class="tab-details__button offer-button" type="button">купить тур сейчас</button>
               </div>
               <p class="tab-details__photo">
                 <picture>
@@ -212,11 +236,11 @@
                 </picture>
               </p>
             </li>
-            <li class="tab-details__item tab-details__item--montenegro">
+            <li class="tab-details__item tab-details__item--montenegro" id="tab-montenegro">
               <div class="tab-details__wrapper">
                 <h3 class="tab-details__title">Черногория</h3>
                 <p class="tab-details__description">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км. </p>
-                <button class="tab-details__button" type="button">купить тур сейчас</button>
+                <button class="tab-details__button offer-button" type="button">купить тур сейчас</button>
               </div>
               <p class="tab-details__photo">
                 <picture>
@@ -228,11 +252,11 @@
                 </picture>
               </p>
             </li>
-            <li class="tab-details__item tab-details__item--croatia">
+            <li class="tab-details__item tab-details__item--croatia" id="tab-croatia">
               <div class="tab-details__wrapper">
                 <h3 class="tab-details__title">Хорватия</h3>
                 <p class="tab-details__description">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.</p>
-                <button class="tab-details__button" type="button">купить тур сейчас</button>
+                <button class="tab-details__button offer-button" type="button">купить тур сейчас</button>
               </div>
               <p class="tab-details__photo">
                 <picture>
@@ -304,7 +328,7 @@
             <p class="prices__contact">Свяжитесь с нами</p>
             <p class="prices__phone"><span class="visually-hidden">phone-icon</span>
               <svg class="prices__phone-icon" width="30" height="30">
-                <use xlink:href="img/sprite.svg#icon-small-phone"></use>
+                <use xlink:href="img/sprite_auto.svg#icon-small-phone"></use>
               </svg>+7 (499) -784-684-46</p>
           </div>
           <article class="prices__offer offer">
@@ -339,7 +363,7 @@
                       Экскурсии по удивительно красивым местам Европы</li>
                   </ul>
                 </div>
-                <button class="offer__button" type="button">купить тур сейчас</button>
+                <button class="offer__button offer-button" type="button">купить тур сейчас</button>
               </li>
               <li class="offer__item">
                 <div class="offer__div">
@@ -376,7 +400,7 @@
                       Экскурсии по удивительно красивым местам Европы</li>
                   </ul>
                 </div>
-                <button class="offer__button" type="button">купить тур сейчас</button>
+                <button class="offer__button offer-button" type="button">купить тур сейчас</button>
               </li>
             </ul>
           </article>
@@ -429,14 +453,14 @@
         <p class="page-footer__contacts-email">
           <span class="visually-hidden">mail-icon</span>
           <svg width="26" height="20">
-            <use xlink:href ="img/sprite.svg#icon-mail"></use>
+            <use xlink:href ="img/sprite_auto.svg#icon-mail"></use>
           </svg>
           <a class="page-footer__contacts-link page-footer__contacts-link--phone" href="#">puteshestviemechta@gmail.ru</a>
         </p>
         <p class="page-footer__contacts-phone">
           <span class="visually-hidden">phone-icon</span>
           <svg class="page-footer__phone-icon" width="30" height="30">
-            <use xlink:href = "img/sprite.svg#icon-small-phone"></use>
+            <use xlink:href = "img/sprite_auto.svg#icon-small-phone"></use>
           </svg>
           <a class="page-footer__contacts-link page-footer__contacts-link--email" href="#">+7 (499) -784-684-46</a>
         </p>
@@ -447,20 +471,20 @@
       </section>
     </footer>
     <section class="modal">
-      <div class="modal__buy">
+      <div class="modal__buy" id="modal-buy">
         <div class="modal__buy-wrap">
           <p class="modal__buy-image-wrap">
             <img src="img/buy-tour-desktop@1x.png" width="338" height="444" alt="Купить тур">
           </p>
           <p class="modal__buy-close"><span class="visually-hidden">Закрыть</span>
-            <svg class="modal__buy-close-icon" width="24" height="24">
+            <svg class="modal__buy-close-icon" id="buy-close" width="24" height="24">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
             </svg></p>
           <div class="modal__buy-inner-wrap">
             <h2 class="modal__buy-title">Купить тур</h2>
             <form class="modal__buy-form" action="#">
               <p class="modal__buy-input-wrap">
-                <input class="modal__buy-input" type="tel" id="modal-tel" name="modal-tel" placeholder="Введите 10 цифр номера" required>
+                <input class="modal__buy-input" type="tel" id="modal-tel" name="modal-tel" placeholder="Введите 10 цифр номера">
               </p>
               <p class="modal__buy-input-wrap">
                 <input class="modal__buy-input" type="email" id="modal-email" name="modal-email" placeholder="E-mail">
@@ -470,15 +494,17 @@
           </div>
         </div>
       </div>
-      <div class="modal__message">
+      <div class="modal__message" id="modal-message">
         <h2 class="visually-hidden">модальное сообщение</h2>
         <p class="modal__message-close"><span class="visually-hidden">Закрыть</span>
-          <svg class="modal__message-close-icon" width="24" height="24">
+          <svg class="modal__message-close-icon" id="message-close" width="24" height="24">
             <use xlink:href="img/sprite_auto.svg#icon-close"></use>
           </svg></p>
         <p class="modal__message-text">Форма успешно отправлена, спасибо! :)</p>
       </div>
     </section>
-    <script src="../bundles/bundle.js"></script>
+    <script src="js/info.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

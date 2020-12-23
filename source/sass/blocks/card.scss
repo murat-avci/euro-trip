@@ -79,3 +79,17 @@
   padding: 30px 25px;
   cursor: pointer;
 }
+
+@media (min-width: $tablet-width) {
+  .card__list {
+    flex-basis: calc(100% / 2);
+  }
+
+  .card__item {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-top: 30px;
+    }
+  }
+}

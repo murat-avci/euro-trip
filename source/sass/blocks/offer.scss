@@ -29,6 +29,10 @@
     .offer__amount {
       color: $main-accent;
     }
+
+    .offer__button {
+      background-color: $accent-focus;
+    }
   }
 }
 
@@ -59,7 +63,6 @@
   position: relative;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400;
   color: $dark;
   margin-bottom: 59px;
 
@@ -84,13 +87,11 @@
   position: relative;
   font-size: 16px;
   line-height: 32px;
-  font-weight: 400;
   color: $dark;
   margin-bottom: 25px;
 }
 
 .offer__button {
-  font-family: inherit;
   font-size: 12px;
   line-height: 15px;
   font-weight: 700;
@@ -108,4 +109,65 @@
   left: -30px;
   width: 22px;
   height: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .offer__list {
+    column-gap: 50px;
+  }
+
+  .offer__item {
+    border: 1px solid rgba($color: $dark, $alpha: 0.3);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 30px 20px 0;
+    max-width: 288px;
+    width: 100%;
+
+    .offer__button {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &:hover {
+      border-color: $main-accent;
+      border-width: 3px;
+      padding-right: 17px;
+      padding-left: 17px;
+    }
+  }
+
+  .offer__wrap {
+    flex-wrap: wrap;
+    margin-bottom: 11px;
+    justify-content: center;
+  }
+
+  .offer__title {
+    font-size: 24px;
+    margin-right: 0;
+    padding: 0 53px;
+  }
+
+  .offer__text {
+    margin-bottom: 31px;
+    text-align: center;
+
+    &::after {
+      bottom: 10px;
+    }
+  }
+
+  .offer__benefits-item {
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+
+  .offer__button {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    padding: 19px 71px;
+    width: 100%;
+  }
 }

@@ -27,12 +27,6 @@
   }
 }
 
-.review__item {
-  &:not(:first-child) {
-    display: none;
-  }
-}
-
 .review__text {
   font-size: 14px;
   line-height: 28px;
@@ -54,4 +48,13 @@
   font-weight: 500;
   color: $dark;
   margin-left: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .review {
+    top: 413px;
+    left: 50%;
+    transform: translateX(-50%);
+    outline: 1px solid tomato;
+  }
 }

@@ -10,8 +10,8 @@
     "autoprefixer": "9.5.x",
     "babel-loader": "^8.2.2",
     "browser-sync": "2.26.x",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x",
+    "eslint": "7.1.0",
+    "eslint-config-htmlacademy": "0.6.0",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
@@ -22,11 +22,12 @@
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "^7.0.1",
+    "gulp-terser": "^2.0.0",
     "gulp-webp": "^4.0.1",
     "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.2.0",
     "stylelint": "^13.8.0",
-    "stylelint-config-htmlacademy": "0.1.x",
+    "stylelint-config-htmlacademy": "^0.1.4",
     "webpack": "^5.10.3",
     "webpack-cli": "^4.2.0"
   },
@@ -34,9 +35,11 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
-    "build": "gulp build && gulp webp && webpack --watch",
+    "build": "gulp build",
     "start": "gulp start",
-    "sprite": "gulp sprite"
+    "webp": "gulp webp",
+    "sprite": "gulp sprite",
+    "webpack": "webpack --watch"
   },
   "browserslist": [
     "last 2 versions",

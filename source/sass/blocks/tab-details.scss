@@ -5,10 +5,6 @@
 .tab-details__item {
   display: flex;
   justify-content: flex-start;
-
-  &:not(:first-child) {
-    display: none;
-  }
 }
 
 .tab-details__wrapper {
@@ -39,7 +35,6 @@
 .tab-details__description {
   font-size: 16px;
   line-height: 28px;
-  font-weight: 400;
   color: rgba($color: $dark, $alpha: 0.7);
   letter-spacing: -0.46px;
   width: 370px;
@@ -51,7 +46,6 @@
 }
 
 .tab-details__button {
-  font-family: inherit;
   font-size: 12px;
   line-height: 15px;
   font-weight: 700;
@@ -60,4 +54,64 @@
   padding: 30px 40px;
   border: none;
   background-color: $main-accent;
+
+  &:hover {
+    background-color: $accent-focus;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tab-details {
+    position: relative;
+  }
+
+  .tab-details__list {
+    padding-left: ((82 / 768) * 100%);
+    padding-right: ((81 / 768) * 100%);
+  }
+
+  .tab-details__item {
+    display: initial;
+  }
+
+  .tab-details__wrapper {
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 0 21px;
+    text-align: center;
+  }
+
+  .tab-details__title {
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .tab-details__description {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .tab-details__button {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    padding: 19px 52px;
+  }
+
+  .tab-details__photo {
+    position: relative;
+
+    & img {
+      margin: 0;
+      width: 100%;
+      height: 415px;
+    }
+  }
 }
